@@ -15,17 +15,17 @@ Este comando permite descargar un contenedor de mysql el cual será usado para p
 ## Ingresar a la consola de MySQL del contenedor
 
 En esta sección se debe conectar a docker y crear la base de datos desde la consola: los pasos son los siguientes:
-- ejecutar en la consola el siguiente comando: docker exec -it mysql-db mysql -p
-- debe ingresar la contraseña del usuario root que fue configurado en la creación del contenedor MYSQL_ROOT_PASSWORD 
-- al ingresar a la consola de mysql ejecutar el siguiente comando para crear la base de datos
+- Ejecutar en la consola el siguiente comando: docker exec -it mysql-db mysql -p
+- Debe ingresar la contraseña del usuario root que fue configurado en la creación del contenedor MYSQL_ROOT_PASSWORD 
+- Al ingresar a la consola de mysql ejecutar el siguiente comando para crear la base de datos
 	create databases db_prueba;
-- una vez creada la base de datos ejecutar la siguiente sentencia sql para crear la tabla donde se almacenara la información de las consultas del clima:
+- Una vez creada la base de datos ejecutar la siguiente sentencia sql para crear la tabla donde se almacenara la información de las consultas del clima:
 	CREATE TABLE db_prueba.history_city(
 	`id` bigint NOT NULL AUTO_INCREMENT,
 	`resultado` varchar(1000) NOT NULL,
 	PRIMARY KEY (`id`)
 	) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-- una vez realizado los pasos anteriores, esta listo para lanzar el proyecto
+- Al realizar los pasos anteriores, esta listo para lanzar el proyecto
 - Tener en cuenta que en el repositorio se encuentra el sql DB_PRUEBA.sql donde estan las sentencias para crear la base de datos y la tabla correspondiente
 ## Lanzar el proyecto
 
